@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Shield, Cpu, Database, Server, Terminal, MapPin, GraduationCap, Award, Zap, Code2 } from 'lucide-react';
 import { PLAYER_DATA } from '../../data/portfolioData';
+import profilePic from '../../assets/profile.jpg';
 
 /**
  * 3D Tilt Player Card Component with Framer Motion
@@ -51,7 +52,7 @@ export default function PlayerCard({ playBlip }) {
 
   return (
     <section id="profile" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
-      
+
       {/* Section Header */}
       <div className="flex flex-col items-start mb-12 border-b border-game-border pb-6">
         <div className="flex items-center gap-2 font-mono text-xs text-game-accent tracking-widest uppercase mb-1">
@@ -69,7 +70,7 @@ export default function PlayerCard({ playBlip }) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
+
         {/* ================= 3D TILT PHOTO CARD (5 COLS) ================= */}
         <div className="lg:col-span-5 flex justify-center perspective-[1200px]">
           <motion.div
@@ -107,18 +108,19 @@ export default function PlayerCard({ playBlip }) {
 
             {/* Profile Photo Area */}
             <div className="relative w-full aspect-square max-h-64 bg-game-card border border-game-border overflow-hidden mb-4 group flex items-center justify-center">
-              
+
               {/* Photo Background Art & Grid */}
               <div className="absolute inset-0 bg-dots-pattern opacity-40" />
-              
+
               {/* Retro Avatar / Visual Representation */}
               <div className="relative z-10 flex flex-col items-center justify-center p-4 text-center">
                 <div className="w-24 h-24 rounded-none border-2 border-game-accent bg-gradient-to-br from-game-border to-game-card p-1 shadow-retro-sm mb-3 flex items-center justify-center">
                   {/* Pixel Character Icon */}
-                  <div className="w-full h-full bg-[#0d121c] flex flex-col items-center justify-center text-white relative">
-                    <span className="text-3xl font-pixel">🎮</span>
-                    <span className="font-mono text-[9px] text-game-mint mt-1 tracking-widest font-bold">MUUFA</span>
-                  </div>
+                  <img
+                    src={profilePic}
+                    alt="Muhammad Wildan Faiz Althafah"
+                    className="w-full h-full object-cover border-2 border-game-accent shadow-retro-sm mb-3"
+                  />
                 </div>
 
                 <div className="font-mono text-sm font-bold text-white tracking-wide">
@@ -155,6 +157,36 @@ export default function PlayerCard({ playBlip }) {
               </div>
             </div>
 
+            {/* RPG Character Base Attributes */}
+            <div className="pt-2 border-t border-game-border/80 mb-3">
+              <div className="flex justify-between items-center mb-1.5">
+                <span className="font-mono text-[10px] text-game-muted uppercase tracking-wider">
+                  BASE ATTRIBUTES
+                </span>
+                <span className="font-mono text-[10px] text-game-mint font-bold">
+                  AVG: 84%
+                </span>
+              </div>
+              <div className="space-y-1.5">
+                {PLAYER_DATA.attributes.map((attr) => (
+                  <div key={attr.label} className="font-mono text-[10px]">
+                    <div className="flex justify-between text-slate-300 mb-0.5">
+                      <span className="text-[9px] text-slate-400">{attr.label}</span>
+                      <span className="font-bold text-[10px]" style={{ color: attr.color }}>
+                        {attr.val}/{attr.max}
+                      </span>
+                    </div>
+                    <div className="w-full bg-game-bg h-1.5 border border-game-border/60 overflow-hidden">
+                      <div
+                        className="h-full transition-all duration-700"
+                        style={{ width: `${attr.val}%`, backgroundColor: attr.color }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Core Tech Stack Micro Badges */}
             <div className="pt-2 border-t border-game-border/80">
               <div className="font-mono text-[10px] text-game-muted uppercase tracking-wider mb-2">
@@ -183,14 +215,14 @@ export default function PlayerCard({ playBlip }) {
 
         {/* ================= STATS & DOSSIER (7 COLS) ================= */}
         <div className="lg:col-span-7 flex flex-col gap-6">
-          
+
           {/* Official Bio Panel */}
           <div className="bg-game-panel border border-game-border p-6 shadow-retro">
             <div className="flex items-center gap-2 font-mono text-xs text-game-accent uppercase tracking-wider mb-3">
               <Terminal className="w-4 h-4 text-game-accent" />
               <span>PLAYER_DOSSIER // BIOGRAPHY</span>
             </div>
-            
+
             {/* The verbatim required description text */}
             <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-sans mb-4 border-l-2 border-game-accent pl-4">
               {PLAYER_DATA.bio}
@@ -228,7 +260,7 @@ export default function PlayerCard({ playBlip }) {
                     <span className="text-sm font-bold text-white">{skill.name}</span>
                     <span className="text-xs text-game-cyan font-bold">{skill.rating}%</span>
                   </div>
-                  
+
                   {/* Visual Stat Gauge */}
                   <div className="w-full bg-game-bg h-2 border border-game-border mb-2 overflow-hidden">
                     <div

@@ -1,115 +1,312 @@
 export const PLAYER_DATA = {
   name: "Muhammad Wildan Faiz Althafah",
-  handle: "Muufaaaaa",
-  title: "Software Engineer & Game Developer",
+  handle: "Muufa",
+  title: "Software Engineering & Game Development",
   status: "ONLINE // READY",
-  classType: "SYSTEM ARCHITECT & GAMEPLAY SCRIPTER",
-  level: 4, // Semester 4
-  exp: "4,250 / 8,000 XP",
+
+  classType: "SOFTWARE ENGINEERING & GAME DEV",
+
+  level: 20,
+  exp: "2,000 / 12,000 XP",
+
   location: "Bogor, Indonesia",
   institution: "Universitas Muhammadiyah Prof. DR. HAMKA (UHAMKA)",
   major: "Teknik Informatika",
-  bio: "Mahasiswa Teknik Informatika semester 4 di UHAMKA, berdomisili di Bogor. Memiliki fokus kuat pada rekayasa perangkat lunak dan arsitektur sistem. Membangun fondasi game development melalui pengelolaan server, manajemen komunitas, serta scripting tingkat lanjut di Minecraft dan Roblox.",
-  
+
+  bio: "Mahasiswa Teknik Informatika semester 5 di UHAMKA yang memiliki minat pada software engineering dan game development. Suka membangun project, mengeksplorasi teknologi, dan mengembangkan kemampuan melalui pengalaman langsung.",
+
   // Game Style Stats
   attributes: [
-    { label: "LOGIC // SYSTEM ARCH", val: 88, max: 100, color: "#00d2ff" },
-    { label: "GAMEPLAY // SCRIPTING", val: 85, max: 100, color: "#10df9e" },
-    { label: "DATABASE // RELATIONS", val: 82, max: 100, color: "#f59e0b" },
-    { label: "SECURITY // AUDITING", val: 80, max: 100, color: "#ff5533" },
+    {
+      label: "LOGIC // PROBLEM SOLVING",
+      val: 82,
+      max: 100,
+      color: "#00d2ff",
+    },
+    {
+      label: "SOFTWARE // DEVELOPMENT",
+      val: 80,
+      max: 100,
+      color: "#10df9e",
+    },
+    {
+      label: "DATABASE // BACKEND",
+      val: 78,
+      max: 100,
+      color: "#f59e0b",
+    },
+    {
+      label: "GAME DEV // EXPLORATION",
+      val: 76,
+      max: 100,
+      color: "#ff5533",
+    },
   ],
 
   // Primary Tech Stacks
   skills: [
-    { name: "C++", level: "Advanced Core", rating: 88, tag: "SYSTEMS / HIGH PERF", desc: "Memory management, data structures, low-level architecture." },
-    { name: "SQL", level: "Proficient", rating: 84, tag: "RDBMS / OPTIMIZATION", desc: "Relational database design, query indexing, transactions." },
-    { name: "PHP", level: "Backend Logic", rating: 82, tag: "SERVER / API", desc: "RESTful endpoints, secure session handling, MVC architecture." },
-    { name: "Python", level: "Scripting & AI", rating: 86, tag: "DATA / AUTOMATION", desc: "Computer vision (CNNs), scripting, server automation." },
+    {
+      name: "C++",
+      level: "Intermediate",
+      rating: 78,
+      tag: "PROGRAMMING / GRAPHICS",
+      desc: "C++ programming with experience in computer graphics using OpenGL/GLUT.",
+    },
+    {
+      name: "PHP",
+      level: "Intermediate",
+      rating: 80,
+      tag: "WEB / BACKEND",
+      desc: "Used in Laravel-based web development and backend application logic.",
+    },
+    {
+      name: "SQL",
+      level: "Intermediate",
+      rating: 78,
+      tag: "DATABASE / MYSQL",
+      desc: "Relational database usage with MySQL for web application development.",
+    },
+    {
+      name: "JavaScript",
+      level: "Intermediate",
+      rating: 80,
+      tag: "WEB / BOT DEVELOPMENT",
+      desc: "Used for web development and Discord bot development with Node.js and Discord.js.",
+    },
   ],
 
-  // Extra Game Dev Specializations
+  // Game Development & Community
   gameDevSpecialties: [
-    { name: "Minecraft Server Infrastructure", desc: "High-concurrency Spigot/Paper server hosting, plugin config, economy tuning." },
-    { name: "Roblox Lua Scripting", desc: "Client-server replication, custom character controllers, inventory & datastores." },
-    { name: "Community Management", desc: "Player engagement protocols, community moderation, event orchestration." }
-  ]
+    {
+      name: "Roblox Game Development",
+      desc: "Experience building educational game systems, NPC dialogue, quest concepts, and HUD interfaces using Roblox Studio.",
+    },
+    {
+      name: "Game UI Design",
+      desc: "Designing HUD and player interfaces for game projects with a focus on usability and visual consistency.",
+    },
+    {
+      name: "Community Management",
+      desc: "Created and managed the INFORMATICX Discord community for Informatics students and technology enthusiasts.",
+    },
+  ],
 };
+
+export const SYSTEM_LOGS = [
+  "SYSTEM INITIALIZATION COMPLETE",
+  "CORE MODULES: C++, PHP, SQL, JAVASCRIPT LOADED",
+  "GAME SYSTEMS: ROBLOX EXPERIENCE READY",
+  "COMMUNITY NODE: INFORMATICX ONLINE",
+  "TARGET OBJECTIVE: GAME DEVELOPMENT // SOFTWARE ENGINEERING",
+  "ALL SYSTEMS NOMINAL // 60 FPS INTERFACE ONLINE",
+];
 
 export const QUESTS = [
   {
     id: "quest-01",
-    code: "QST-01 // E-COMMERCE-SYS",
-    title: "E-commerce System",
-    category: "Full-Stack & Systems Architecture",
-    difficulty: "HARD",
+    code: "QST-01 // RECYCLICK",
+    title: "Recyclick",
+    category: "Web Development",
+    difficulty: "CRITICAL",
     status: "COMPLETED",
-    description: "Sistem manajemen transaksi yang dibangun dengan C++, SQL, dan PHP. Mengintegrasikan pemrosesan transaksi berkecepatan tinggi dengan integritas data relasional ACID.",
-    lore: "Dibangun untuk menangani throughput tinggi dengan pemrosesan order teroptimasi di sisi backend dan manajemen inventaris real-time.",
-    techStack: ["C++", "SQL", "PHP", "Relational DB", "ACID Transactions"],
+
+    description:
+      "Aplikasi e-commerce produk ramah lingkungan berbasis Laravel dengan katalog produk, cart, checkout, wishlist, eco points, eco badge, invoice, serta dashboard user dan admin.",
+
+    lore:
+      "Project e-commerce bertema lingkungan yang menggabungkan proses belanja dengan fitur eco points dan eco badge.",
+
+    techStack: [
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Blade",
+      "Tailwind CSS",
+      "Bootstrap",
+      "GitHub",
+    ],
+
     stats: {
-      performance: "+35% Latency Reduction",
-      integrity: "100% ACID Compliant",
-      role: "Lead Systems Architect"
+      focus: "EcoCommerce",
+      systems: "Catalog / Cart / Checkout",
+      role: "Backend Developer",
     },
-    githubUrl: "https://github.com/Muufaaaaa"
+
+    highlights: [
+      "Product catalog",
+      "Cart and checkout system",
+      "Wishlist feature",
+      "Eco points and eco badge",
+      "Admin dashboard",
+      "Invoice page",
+      "Responsive interface",
+    ],
+
+    githubUrl: "",
   },
+
   {
     id: "quest-02",
-    code: "QST-02 // IGRS-BREACH-AUDIT",
-    title: "IGRS Data Breach Analysis",
-    category: "Cybersecurity & Distributed Systems",
-    difficulty: "CRITICAL",
-    status: "INVESTIGATED",
-    description: "Investigasi kerentanan API dan miskonfigurasi sistem terdistribusi pada insiden Indonesia Game Rating System (IGRS).",
-    lore: "Analisis forensik digital yang membedah vektor serangan autentikasi, privilege escalation, dan strategi perbaikan arsitektur zero-trust.",
-    techStack: ["API Auditing", "Distributed Systems", "Vulnerability Analysis", "Zero Trust"],
+    code: "QST-02 // CAMPUS-PASS",
+    title: "CampusPass",
+    category: "Web3",
+    difficulty: "MEDIUM",
+    status: "COMPLETED",
+
+    description:
+      "Platform sertifikat digital mahasiswa berbasis blockchain yang memungkinkan sertifikat diterbitkan, disimpan sebagai metadata, dan diverifikasi melalui wallet serta smart contract.",
+
+    lore:
+      "Project yang mengeksplorasi penggunaan blockchain untuk penerbitan dan verifikasi sertifikat digital mahasiswa.",
+
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "Solidity",
+      "MetaMask",
+      "IPFS",
+      "Smart Contract",
+      "Vite",
+    ],
+
     stats: {
-      scope: "Enterprise Gov Platform",
-      vectors: "Broken Object Level Auth (BOLA)",
-      role: "Security Researcher"
+      focus: "Digital Certificate",
+      systems: "Wallet / Smart Contract",
+      role: "Web3 Developer",
     },
-    githubUrl: "https://github.com/Muufaaaaa"
+
+    highlights: [
+      "MetaMask wallet integration",
+      "Smart contract interaction",
+      "IPFS metadata storage",
+      "Certificate verification",
+      "Digital certificate concept",
+      "Protected route handling",
+    ],
+
+    githubUrl: "",
   },
+
   {
     id: "quest-03",
-    code: "QST-03 // SAFE-CAMPUS",
-    title: "SAFE Campus Framework",
-    category: "Civic Tech & Public Safety",
-    difficulty: "MEDIUM",
-    status: "PROTOTYPED",
-    description: "Perancangan infrastruktur digital pelaporan darurat dan anti-pelecehan lingkungan kampus dengan enkripsi end-to-end.",
-    lore: "Menghubungkan civitas akademika dengan sistem pelaporan anonim cepat tanggap yang aman dari kebocoran identitas dan tamper-proof.",
-    techStack: ["PHP", "SQL", "Cryptographic Hashing", "Web Services", "UI/UX"],
+    code: "QST-03 // SAWIT-THE-LAST-CHANCE",
+    title: "Sawit: The Last Chance",
+    category: "Game Development",
+    difficulty: "CRITICAL",
+    status: "IN DEVELOPMENT",
+
+    description:
+      "Game edukasi Roblox bertema lingkungan yang membahas dampak deforestasi, banjir, longsor, dan tata kelola lahan sawit melalui eksplorasi, NPC, quest, dan dialog interaktif.",
+
+    lore:
+      "Pemain mengikuti perjalanan seorang pekerja baru yang menemukan berbagai permasalahan lingkungan di sebuah desa perkebunan melalui eksplorasi dan interaksi dengan NPC.",
+
+    techStack: [
+      "Roblox Studio",
+      "Luau",
+      "Game UI Design",
+      "Figma",
+      "Software Development Life Cycle",
+      "Agile",
+    ],
+
     stats: {
-      anonymity: "Zero-Knowledge Logging",
-      responseTarget: "< 30s Dispatch",
-      role: "Full-Stack Engineer"
+      focus: "Educational Game",
+      systems: "NPC / Quest / HUD",
+      role: "Game UI Developer",
     },
-    githubUrl: "https://github.com/Muufaaaaa"
+
+    highlights: [
+      "NPC dialogue system",
+      "Quest tracker",
+      "Story-based gameplay",
+      "Environmental education theme",
+      "HUD system",
+      "Interactive Roblox environment",
+    ],
+
+    githubUrl: "",
   },
+
   {
     id: "quest-04",
-    code: "QST-04 // VISION-CNN-BENCH",
-    title: "MobileNet vs ResNet CNN",
-    category: "Machine Learning & Computer Vision",
-    difficulty: "HARD",
-    status: "RESEARCHED",
-    description: "Riset perbandingan efisiensi dan akurasi model untuk klasifikasi aktivitas pembelajaran mahasiswa menggunakan CNN.",
-    lore: "Benchmarking performa model berbobot ringan (MobileNet) versus arsitektur residual dalam (ResNet) untuk evaluasi real-time edge computing.",
-    techStack: ["Python", "TensorFlow / Keras", "Computer Vision", "Model Benchmarking"],
-    stats: {
-      f1Score: "High Precision Balance",
-      inferenceSpeed: "Real-time edge ready",
-      role: "ML Researcher"
-    },
-    githubUrl: "https://github.com/Muufaaaaa"
-  }
-];
+    code: "QST-04 // SMART-STUDY-GROUP",
+    title: "Smart Study Group Manager",
+    category: "Automation",
+    difficulty: "MEDIUM",
+    status: "COMPLETED",
 
-export const SYSTEM_LOGS = [
-  "SYSTEM INITIALIZATION COMPLETE",
-  "CORE MODULES: C++, SQL, PHP, PYTHON LOADED",
-  "SERVER NODES: MINECRAFT & ROBLOX ECOSYSTEM READY",
-  "TARGET_OBJECTIVE: GAME_DEVELOPMENT // SOFTWARE_ENGINEERING",
-  "ALL VITAL SIGNS NOMINAL // 60 FPS ENGINE ONLINE"
+    description:
+      "Sistem otomasi akademik berbasis n8n dan Discord bot untuk membantu mengelola jadwal, reminder, progress mingguan, serta status penyelesaian tugas.",
+
+    lore:
+      "Workflow automation yang menghubungkan Google Calendar, Google Sheets, n8n, dan Discord untuk membantu pengelolaan aktivitas akademik.",
+
+    techStack: [
+      "n8n",
+      "Discord.js",
+      "Google Sheets",
+      "Google Calendar",
+      "Webhook",
+      "JSON",
+    ],
+
+    stats: {
+      focus: "Workflow Automation",
+      systems: "Calendar / Sheets / Discord",
+      role: "Automation Developer",
+    },
+
+    highlights: [
+      "Google Calendar synchronization",
+      "Automatic task reminder",
+      "Weekly progress report",
+      "Task completion command",
+      "Discord slash commands",
+      "Google Sheets task database",
+    ],
+
+    githubUrl: "",
+  },
+
+  {
+    id: "quest-05",
+    code: "QST-05 // INFIX",
+    title: "Infix",
+    category: "Bot Development",
+    difficulty: "HARD",
+    status: "IN DEVELOPMENT",
+
+    description:
+      "Bot Discord untuk server komunitas Informatics dengan fitur moderation, warning system, temporary voice channel, server statistics, utility command, dan pengelolaan server.",
+
+    lore:
+      "Bot Discord modular yang dikembangkan untuk mendukung kebutuhan moderation, utility, dan pengelolaan server komunitas.",
+
+    techStack: [
+      "Discord.js",
+      "Node.js",
+      "JavaScript",
+      "MongoDB",
+      "Slash Command",
+      "Role Permission",
+    ],
+
+    stats: {
+      focus: "Discord Bot Development",
+      systems: "Moderation / Utility / Database",
+      role: "Bot Developer",
+    },
+
+    highlights: [
+      "Modular slash command system",
+      "Warning and moderation features",
+      "Temporary voice channel",
+      "Server statistics",
+      "Role and channel permission handling",
+      "Database integration",
+    ],
+
+    githubUrl: "",
+  },
 ];

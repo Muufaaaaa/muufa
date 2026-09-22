@@ -19,9 +19,22 @@ export default function QuestLog({ playClick, playBlip }) {
     }
   };
 
+  const getStatusBadge = (status) => {
+    switch (status) {
+      case "COMPLETED":
+        return "text-game-mint border-game-mint bg-emerald-950/30";
+
+      case "IN DEVELOPMENT":
+        return "text-game-amber border-game-amber/40 bg-amber-950/30";
+
+      default:
+        return "text-game-mint border-game-mint bg-emerald-950/30";
+    }
+  };
+
   return (
     <section id="quests" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
-      
+
       {/* Section Header */}
       <div className="flex flex-col items-start mb-12 border-b border-game-border pb-6">
         <div className="flex items-center gap-2 font-mono text-xs text-game-mint tracking-widest uppercase mb-1">
@@ -33,14 +46,14 @@ export default function QuestLog({ playClick, playBlip }) {
             Quest Log &amp; Projects
           </h2>
           <div className="font-mono text-xs text-game-muted">
-            AVAILABLE QUESTS: <span className="text-white font-bold">04/04</span> // REWARDS: UNLOCKED
+            AVAILABLE QUESTS: <span className="text-white font-bold">05/05</span> // REWARDS: UNLOCKED
           </div>
         </div>
       </div>
 
       {/* Main Quest Log Container (Dual-Pane RPG Interface) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        
+
         {/* Left: Quest Selection List (5 Cols) */}
         <div className="lg:col-span-5 space-y-3">
           <div className="font-mono text-xs text-game-muted px-2 uppercase tracking-wider mb-2 flex justify-between items-center">
@@ -60,11 +73,10 @@ export default function QuestLog({ playClick, playBlip }) {
                   playClick();
                 }}
                 onMouseEnter={playBlip}
-                className={`p-4 border-2 cursor-pointer transition-all duration-150 relative ${
-                  isSelected
-                    ? 'bg-game-panel border-game-accent shadow-retro-accent translate-x-1'
-                    : 'bg-game-panel/80 border-game-border hover:border-game-borderBright hover:bg-game-panel shadow-retro-sm'
-                }`}
+                className={`p-4 border-2 cursor-pointer transition-all duration-150 relative ${isSelected
+                  ? 'bg-game-panel border-game-accent shadow-retro-accent translate-x-1'
+                  : 'bg-game-panel/80 border-game-border hover:border-game-borderBright hover:bg-game-panel shadow-retro-sm'
+                  }`}
               >
                 {/* Active Indicator Strip */}
                 {isSelected && (
@@ -136,7 +148,11 @@ export default function QuestLog({ playClick, playBlip }) {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-xs px-2.5 py-1 bg-game-card border border-game-mint text-game-mint font-bold">
+                  <span
+                    className={`font-mono text-xs px-2.5 py-1 bg-game-card border font-bold ${getStatusBadge(
+                      activeQuest.status
+                    )}`}
+                  >
                     STATUS: {activeQuest.status}
                   </span>
                 </div>
