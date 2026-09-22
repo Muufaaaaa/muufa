@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+/* Retro CRT Dot Matrix & Grid Background */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Subtle CRT Scanlines (Non-intrusive) */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Custom Indie Game Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080a0f;
+  border-left: 1px solid #1e2638;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242e42;
+  border: 1px solid #3b4b6b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5533;
+}
+
+/* Notched Corners Game UI */
+.notched-corner-tr {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%);
+}
+
+.notched-corner-both {
+  clip-path: polygon(
+    0 12px, 
+    12px 0, 
+    calc(100% - 12px) 0, 
+    100% 12px, 
+    100% calc(100% - 12px), 
+    calc(100% - 12px) 100%, 
+    12px 100%, 
+    0 calc(100% - 12px)
+  );
+}
+
+/* Tactile Mechanical Button */
+.btn-game-primary {
+  @apply relative inline-flex items-center justify-center font-mono font-bold tracking-wider uppercase 
+         bg-game-accent text-white border-2 border-slate-900 shadow-retro-accent
+         transition-all duration-100 ease-out active:translate-x-1 active:translate-y-1 active:shadow-none
+         hover:bg-game-accentHover;
+}
+
+.btn-game-secondary {
+  @apply relative inline-flex items-center justify-center font-mono font-semibold tracking-wider uppercase 
+         bg-game-card text-game-text border-2 border-game-border shadow-retro
+         transition-all duration-100 ease-out active:translate-x-1 active:translate-y-1 active:shadow-none
+         hover:border-game-borderBright hover:text-white;
+}
+
+/* Noise texture generator in CSS */
+.noise-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 3px 3px;
+  pointer-events: none;
+}
